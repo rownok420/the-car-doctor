@@ -1,0 +1,21 @@
+.logo{
+    height: 45px;
+}
+
+.nav-style{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: .2s;
+
+}
+
+nav a:hover{
+    color: #FF3614;
+}

@@ -3,11 +3,11 @@
 }
 
 .nav-style{
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    background-color:  rgb(28, 99, 184);
 }
 
 nav a {
-    color: black;
+    color: white;
     text-decoration: none;
     margin: 10px;
     font-size: 18px;

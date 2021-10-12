@@ -1,0 +1,21 @@
+.dotted-hr{
+    width: 120px;
+    border: 8px dotted black;
+    border-bottom: none;
+    background-color: unset;
+    margin: auto;
+}
+
+.services-heding{
+    color: rgb(28, 99, 184);
+    font-weight: 700;
+}
+
+.my-btn{
+    border: none;
+    background-color: rgb(28, 99, 184);
+    color: white;
+    font-weight: 500;
+    padding: 12px 25px;
+    border-radius: 5px;
+}

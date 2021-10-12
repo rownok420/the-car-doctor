@@ -1,8 +1,9 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
-import banner1 from '../../../images/banner/banner1.jpg'
-import banner2 from '../../../images/banner/banner2.jpg'
-import banner3 from '../../../images/banner/banner3.jpg'
+import banner1 from "../../../images/banner/banner1.jpg";
+import banner2 from "../../../images/banner/banner2.jpg";
+import banner3 from "../../../images/banner/banner3.jpg";
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -15,10 +16,14 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
+                        <h1>
+                            {" "}
+                            HONEST, QUALITY WORK AT AFFORDABLE PRICES
+                        </h1>
                         <p>
-                            Nulla vitae elit libero, a pharetra augue mollis
-                            interdum.
+                            We provide top-notch service for import and <br />{" "}
+                            Exhaust, Tune Ups, Engine Repairs, Electrical and
+                            A.C Systems.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -30,10 +35,14 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
+                        <h1>
+                            {" "}
+                            COMPETITIVE PRICES LONG TERM WARRANTIES
+                        </h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.
+                            We provide top-notch service for import and <br />{" "}
+                            Exhaust, Tune Ups, Engine Repairs, Electrical and
+                            A.C Systems.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -45,10 +54,14 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
+                        <h1>
+                            {" "}
+                            MASTER MAINTENANCE & QUALIFIED TECHNICIANS
+                        </h1>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl
-                            consectetur.
+                            We provide top-notch service for import and <br />{" "}
+                            Exhaust, Tune Ups, Engine Repairs, Electrical and
+                            A.C Systems.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>

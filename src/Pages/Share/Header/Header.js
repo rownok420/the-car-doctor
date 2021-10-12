@@ -2,12 +2,12 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
-import logo from "../../../images/logo-black.png";
+import logo from "../../../images/logo.png";
 
 const Header = () => {
     const activeStyle = {
         fontWeight: "bold",
-        color: "#FF3614",
+        color: "#f2184f",
         textDecoration: "underline",
     };
     return (

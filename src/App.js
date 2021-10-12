@@ -7,12 +7,12 @@ import {
     Route
   } from "react-router-dom";
 import Header from "./Pages/Share/Header/Header";
-import Services from "./Pages/Home/Services/Services";
 import NotFound from "./Pages/NotFound/NotFound";
+import AllServices from "./Pages/AllServices/AllServices";
 
 function App() {
     return (
-        <div>
+        <div className='app'>
             <Router>
                 <Header />
                 <Switch>
@@ -23,7 +23,7 @@ function App() {
                         <Home />
                     </Route>
                     <Route exact path='/services'>
-                        <Services />
+                        <AllServices />
                     </Route>
                     <Route exact path='*'>
                         <NotFound />

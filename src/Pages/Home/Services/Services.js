@@ -10,10 +10,10 @@ const Services = () => {
     const ourServices = services.slice(0, 4);
 
     return (
-        <div className="my-5">
+        <div className="py-5 service-bg">
             <div className="container">
                 <div className="text-center">
-                    <h1 className="services-heding">BEST SERVICES</h1>
+                    <h1 className="services-heding">POPULAR  SERVICES</h1>
                     <hr className="dotted-hr mb-3" />
                     <p>
                         Our professionals will perform diagnostic tests, fluid
@@ -22,7 +22,7 @@ const Services = () => {
                     </p>
                 </div>
                 <div>
-                    <Row xs={1} md={3} lg={4} className="g-4 mt-3">
+                    <Row xs={1} md={2} lg={4} className="g-4 mt-3">
                         {ourServices.map((service) => (
                             <Service key={service.id} service={service} />
                         ))}
@@ -31,6 +31,7 @@ const Services = () => {
                 <div className='text-center mt-5'>
                     <Link to='/services'><button className='my-btn'>More Services</button></Link>
                 </div>
+                
             </div>
         </div>
     );

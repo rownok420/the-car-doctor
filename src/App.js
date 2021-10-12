@@ -9,6 +9,7 @@ import {
 import Header from "./Pages/Share/Header/Header";
 import NotFound from "./Pages/NotFound/NotFound";
 import AllServices from "./Pages/AllServices/AllServices";
+import Login from "./Pages/Login/Login/Login";
 
 function App() {
     return (
@@ -24,6 +25,9 @@ function App() {
                     </Route>
                     <Route exact path='/services'>
                         <AllServices />
+                    </Route>
+                    <Route exact path='/login'>
+                        <Login />
                     </Route>
                     <Route exact path='*'>
                         <NotFound />

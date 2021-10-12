@@ -7,7 +7,7 @@ import logo from "../../../images/logo.png";
 const Header = () => {
     const activeStyle = {
         fontWeight: "bold",
-        color: "#f2184f",
+        color: "rgb(244, 199, 11)",
         textDecoration: "underline",
     };
     return (
@@ -36,8 +36,8 @@ const Header = () => {
                             Contact us
                         </NavLink>
                     </Nav>
-                    <NavLink to="/enroll">
-                        <button className="home-button rounded-pill pb-2 mt-0">
+                    <NavLink to="/login">
+                        <button className="home-button rounded-pill login-btn">
                             Login
                         </button>
                     </NavLink>

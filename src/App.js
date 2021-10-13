@@ -7,6 +7,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 import AllServices from "./Pages/AllServices/AllServices";
 import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
+import About from "./Pages/About/About";
 
 function App() {
     return (
@@ -23,6 +24,9 @@ function App() {
                         </Route>
                         <Route exact path="/services">
                             <AllServices />
+                        </Route>
+                        <Route exact path="/about">
+                            <About />
                         </Route>
                         <Route exact path="/login">
                             <Login />
@@ -42,3 +46,5 @@ export default App;
 // http://preview.themeforest.net/item/autoservice-car-repair-and-car-service/full_screen_preview/21138492
 
 // http://preview.themeforest.net/item/autoresq-auto-repair-wordpress-theme/full_screen_preview/22307663
+
+//https://www.devsnews.com/template/gerez/gerez/index.html

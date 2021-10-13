@@ -1,0 +1,29 @@
+.activity-heading{
+    color: #FF3614;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.card-1,.card-3,.card-4{
+    border:none;
+    background: #1c62b88c;
+    color: #0b2154;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.card-2{
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 40px #1c62b88c;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.card-hover{
+    transition: .4s transform;
+}
+
+.card-hover:hover{
+    transform: translateY(-30px);
+}

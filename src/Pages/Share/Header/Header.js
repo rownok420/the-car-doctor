@@ -64,7 +64,7 @@ const Header = () => {
                                 src={user.photoURL}
                                 width="35"
                                 height="35"
-                                className="d-inline-block align-top rounded-circle"
+                                className="d-inline-block align-top rounded-circle m-2 me-0"
                                 alt=""
                             />
                         </Navbar.Brand>

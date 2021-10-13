@@ -2,14 +2,20 @@ import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import "./Login.css";
 import loginImg from "../../../images/login.png";
+import useAuth from "../../../Hooks/useAuth";
 
 const Login = () => {
+    const { signInUsingGoogle, signInUsingFacebook, signInUsingGitHub } = useAuth();
+
+    const handleRegister = (e) => {
+        e.preventDefault();
+    };
     return (
         <div>
             <Container>
                 <Row>
                     <Col xs={12} md={6}>
-                        <div className='mb-4'>
+                        <div className="mb-4">
                             <img className="w-100" src={loginImg} alt="" />
                         </div>
                     </Col>
@@ -20,11 +26,21 @@ const Login = () => {
                     >
                         <div>
                             <div>
-                                <h2 className='mb-2 fw-bold' style={{color: "#1c63b8"}}>Create an Account</h2>
-                                <p className='text-muted mb-4'>Setup a new account in a minute</p>
+                                <h2
+                                    className="mb-2 fw-bold"
+                                    style={{ color: "#1c63b8" }}
+                                >
+                                    Create an Account
+                                </h2>
+                                <p className="text-muted mb-4">
+                                    Setup a new account in a minute
+                                </p>
                             </div>
                             <div>
-                                <Form className="w-100">
+                                <Form
+                                    onSubmit={handleRegister}
+                                    className="w-100"
+                                >
                                     <Form.Group
                                         className="mb-3"
                                         controlId="formBasicName"
@@ -62,7 +78,7 @@ const Login = () => {
                                         controlId="formBasicCheckbox"
                                     >
                                         <Form.Check
-                                            style={{color: "#1c63b8"}}
+                                            style={{ color: "#1c63b8" }}
                                             type="checkbox"
                                             label="Already register"
                                         />
@@ -75,13 +91,31 @@ const Login = () => {
                                     </button>
                                 </Form>
                             </div>
-                            <div className='mt-4 mb-5 text-center'>
+                            <div className="mt-4 mb-5 text-center">
                                 <small>or register with</small>
-                                <div className='mt-4'>
-                                    <i className="fab fab-icon fa-2x fa-facebook"></i>
-                                    <i className="fab fab-icon fa-2x fa-google"></i>
-                                    <i className="fab fab-icon fa-2x fa-twitter"></i>
-                                    <i className="fab fab-icon fa-2x fa-github"></i>
+                                <div className="mt-4">
+                                    <i
+                                        role="button"
+                                        style={{ color: "#EB4233" }}
+                                        onClick={signInUsingGoogle}
+                                        className="fab fab-icon fa-2x fa-google"
+                                    ></i>
+                                    <i
+                                        role="button"
+                                        style={{ color: "#1877f2" }}
+                                        onClick={signInUsingFacebook}
+                                        className="fab fab-icon fa-2x fa-facebook"
+                                    ></i>
+                                    <i
+                                        role="button"
+                                        style={{ color: "#1877f2" }}
+                                        className="fab fab-icon fa-2x fa-twitter"
+                                    ></i>
+                                    <i
+                                        role="button"
+                                        onClick={signInUsingGitHub}
+                                        className="fab fab-icon fa-2x fa-github"
+                                    ></i>
                                 </div>
                             </div>
                         </div>

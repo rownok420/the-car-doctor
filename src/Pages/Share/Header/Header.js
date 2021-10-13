@@ -3,8 +3,10 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import logo from "../../../images/logo.png";
+import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
+    const { user, logOut } = useAuth();
     const activeStyle = {
         fontWeight: "bold",
         color: "rgb(244, 199, 11)",
@@ -15,7 +17,7 @@ const Header = () => {
             <Container>
                 <Navbar.Brand>
                     <NavLink to="/">
-                        <img className='logo' src={logo} alt="logo" />
+                        <img className="logo" src={logo} alt="logo" />
                     </NavLink>
                 </Navbar.Brand>
 
@@ -36,11 +38,37 @@ const Header = () => {
                             Contact us
                         </NavLink>
                     </Nav>
-                    <NavLink to="/login">
-                        <button className="home-button rounded-pill login-btn">
-                            Login
-                        </button>
-                    </NavLink>
+                    {user.email ? (
+                        <div>
+                            <NavLink to="/login">
+                                <button
+                                    onClick={logOut}
+                                    className="home-button rounded-pill login-btn"
+                                >
+                                    Log out
+                                </button>
+                            </NavLink>
+                        </div>
+                    ) : (
+                        <div>
+                            <NavLink to="/login">
+                                <button className="home-button rounded-pill login-btn">
+                                    Login
+                                </button>
+                            </NavLink>
+                        </div>
+                    )}
+                    {user.email && <div>
+                        <Navbar.Brand>
+                            <img
+                                src={user.photoURL}
+                                width="35"
+                                height="35"
+                                className="d-inline-block align-top rounded-circle"
+                                alt=""
+                            />
+                        </Navbar.Brand>
+                    </div>}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

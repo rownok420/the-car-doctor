@@ -16,10 +16,10 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1>
+                        <h2>
                             {" "}
                             HONEST, QUALITY WORK AT AFFORDABLE PRICES
-                        </h1>
+                        </h2>
                         <p>
                             We provide top-notch service for import and <br />{" "}
                             Exhaust, Tune Ups, Engine Repairs, Electrical and
@@ -35,10 +35,10 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1>
+                        <h2>
                             {" "}
                             COMPETITIVE PRICES LONG TERM WARRANTIES
-                        </h1>
+                        </h2>
                         <p>
                             We provide top-notch service for import and <br />{" "}
                             Exhaust, Tune Ups, Engine Repairs, Electrical and
@@ -54,10 +54,10 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h1>
+                        <h2>
                             {" "}
                             MASTER MAINTENANCE & QUALIFIED TECHNICIANS
-                        </h1>
+                        </h2>
                         <p>
                             We provide top-notch service for import and <br />{" "}
                             Exhaust, Tune Ups, Engine Repairs, Electrical and

@@ -8,6 +8,7 @@ import AllServices from "./Pages/AllServices/AllServices";
 import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
 import About from "./Pages/About/About";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
     return (
@@ -27,6 +28,9 @@ function App() {
                         </Route>
                         <Route exact path="/about">
                             <About />
+                        </Route>
+                        <Route exact path="/contact">
+                            <Contact />
                         </Route>
                         <Route exact path="/login">
                             <Login />

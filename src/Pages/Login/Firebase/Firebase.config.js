@@ -9,12 +9,3 @@ const firebaseConfig = {
 };
 
 export default firebaseConfig;
-
-
-
-    /* apiKey: "AIzaSyA4nv1FIc-7vZqkM7ICfHoZQDc5heUlK8I",
-    authDomain: "the-car-doctor-e45ab.firebaseapp.com",
-    projectId: "the-car-doctor-e45ab",
-    storageBucket: "the-car-doctor-e45ab.appspot.com",
-    messagingSenderId: "179512592365",
-    appId: "1:179512592365:web:01af6649881f20b1e809e4", */

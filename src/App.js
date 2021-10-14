@@ -9,6 +9,8 @@ import Login from "./Pages/Login/Login/Login";
 import AuthProvider from "./Context/AuthProvider";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
+import Footer from "./Pages/Share/Footer/Footer";
+import PrivateRoute from "./Pages/Login/PrivateRoute/PrivateRoute";
 
 function App() {
     return (
@@ -23,9 +25,9 @@ function App() {
                         <Route exact path="/home">
                             <Home />
                         </Route>
-                        <Route exact path="/services">
+                        <PrivateRoute exact path="/services">
                             <AllServices />
-                        </Route>
+                        </PrivateRoute>
                         <Route exact path="/about">
                             <About />
                         </Route>
@@ -39,6 +41,7 @@ function App() {
                             <NotFound />
                         </Route>
                     </Switch>
+                    <Footer />
                 </Router>
             </AuthProvider>
         </div>

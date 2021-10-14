@@ -22,36 +22,15 @@ const useFirebase = () => {
     const gitHubProvider = new GithubAuthProvider();
 
     const signInUsingGoogle = () => {
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                console.log(result.user);
-                setUser(result.user);
-            })
-            .catch((err) => {
-                setError(err.message);
-            });
+        return signInWithPopup(auth, googleProvider);
     };
 
     const signInUsingFacebook = () => {
-        signInWithPopup(auth, facebookProvider)
-            .then((result) => {
-                console.log(result.user);
-                setUser(result.user);
-            })
-            .catch((err) => {
-                setError(err.message);
-            });
+        return signInWithPopup(auth, facebookProvider);
     };
 
     const signInUsingGitHub = () => {
-        signInWithPopup(auth, gitHubProvider)
-            .then((result) => {
-                console.log(result.user);
-                setUser(result.user);
-            })
-            .catch((err) => {
-                setError(err.message);
-            });
+        return signInWithPopup(auth, gitHubProvider);
     };
 
     const logOut = () => {

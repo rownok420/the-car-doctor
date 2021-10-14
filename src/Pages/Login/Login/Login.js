@@ -2,10 +2,11 @@ import React from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
 import "./Login.css";
 import loginImg from "../../../images/login.png";
-import useAuth from "../../../Hooks/useAuth";
+import useSignIn from "../../../Hooks/useSignIn";
 
 const Login = () => {
-    const { signInUsingGoogle, signInUsingFacebook, signInUsingGitHub } = useAuth();
+    const { handleGoogleLogin, handleFacebookLogin, handleGithubLogin } =
+        useSignIn();
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -97,13 +98,13 @@ const Login = () => {
                                     <i
                                         role="button"
                                         style={{ color: "#EB4233" }}
-                                        onClick={signInUsingGoogle}
+                                        onClick={handleGoogleLogin}
                                         className="fab fab-icon fa-2x fa-google"
                                     ></i>
                                     <i
                                         role="button"
                                         style={{ color: "#1877f2" }}
-                                        onClick={signInUsingFacebook}
+                                        onClick={handleFacebookLogin}
                                         className="fab fab-icon fa-2x fa-facebook"
                                     ></i>
                                     <i
@@ -113,7 +114,7 @@ const Login = () => {
                                     ></i>
                                     <i
                                         role="button"
-                                        onClick={signInUsingGitHub}
+                                        onClick={handleGithubLogin}
                                         className="fab fab-icon fa-2x fa-github"
                                     ></i>
                                 </div>

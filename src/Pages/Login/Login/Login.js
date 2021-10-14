@@ -3,14 +3,23 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import "./Login.css";
 import loginImg from "../../../images/login.png";
 import useSignIn from "../../../Hooks/useSignIn";
+import useAuth from "../../../Hooks/useAuth";
 
 const Login = () => {
     const { handleGoogleLogin, handleFacebookLogin, handleGithubLogin } =
         useSignIn();
 
-    const handleRegister = (e) => {
-        e.preventDefault();
-    };
+    const {
+        handleRegister,
+        handleNameChange,
+        handleEmailChange,
+        handlePasswordChange,
+        toggleLogIn,
+        isLogin,
+        error,
+        handleResetPassword,
+    } = useAuth();
+
     return (
         <div>
             <Container>
@@ -31,10 +40,13 @@ const Login = () => {
                                     className="mb-2 fw-bold"
                                     style={{ color: "#1c63b8" }}
                                 >
-                                    Create an Account
+                                    {isLogin
+                                        ? "Login Your Account"
+                                        : "Create an Account"}
                                 </h2>
                                 <p className="text-muted mb-4">
-                                    Setup a new account in a minute
+                                    {!isLogin &&
+                                        "Setup a new account in a minute"}
                                 </p>
                             </div>
                             <div>
@@ -42,22 +54,27 @@ const Login = () => {
                                     onSubmit={handleRegister}
                                     className="w-100"
                                 >
-                                    <Form.Group
-                                        className="mb-3"
-                                        controlId="formBasicName"
-                                    >
-                                        <Form.Control
-                                            type="text"
-                                            placeholder="Your name"
-                                        />
-                                    </Form.Group>
+                                    {!isLogin && (
+                                        <Form.Group
+                                            className="mb-3"
+                                            controlId="formBasicName"
+                                        >
+                                            <Form.Control
+                                                onBlur={handleNameChange}
+                                                type="text"
+                                                placeholder="Your name"
+                                            />
+                                        </Form.Group>
+                                    )}
                                     <Form.Group
                                         className="mb-3"
                                         controlId="formBasicEmail"
                                     >
                                         <Form.Control
+                                            onBlur={handleEmailChange}
                                             type="email"
                                             placeholder="Email address"
+                                            required
                                         />
                                         <Form.Text className="text-muted">
                                             We'll never share your email with
@@ -70,25 +87,47 @@ const Login = () => {
                                         controlId="formBasicPassword"
                                     >
                                         <Form.Control
+                                            onBlur={handlePasswordChange}
                                             type="password"
                                             placeholder="Password"
+                                            required
                                         />
                                     </Form.Group>
-                                    <Form.Group
-                                        className="mb-3"
-                                        controlId="formBasicCheckbox"
-                                    >
-                                        <Form.Check
-                                            style={{ color: "#1c63b8" }}
-                                            type="checkbox"
-                                            label="Already register"
-                                        />
-                                    </Form.Group>
+                                    <div>
+                                        <p className="text-warning">{error}</p>
+                                    </div>
+                                    <div className="d-flex justify-content-between">
+                                        <Form.Group
+                                            className="mb-3"
+                                            controlId="formBasicCheckbox"
+                                        >
+                                            <Form.Check
+                                                onClick={toggleLogIn}
+                                                style={{ color: "#1c63b8" }}
+                                                type="checkbox"
+                                                label="Already register"
+                                            />
+                                        </Form.Group>
+                                        <div>
+                                            {isLogin && (
+                                                <p
+                                                    onClick={
+                                                        handleResetPassword
+                                                    }
+                                                    className="text-primary"
+                                                    role="button"
+                                                    tabIndex="0"
+                                                >
+                                                    Forgot password ?
+                                                </p>
+                                            )}
+                                        </div>
+                                    </div>
                                     <button
                                         className="login-btn rounded-2"
                                         type="submit"
                                     >
-                                        Register
+                                        {isLogin ? "Login" : "Register"}
                                     </button>
                                 </Form>
                             </div>

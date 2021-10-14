@@ -21,7 +21,7 @@ const Header = () => {
                     </NavLink>
                 </Navbar.Brand>
 
-                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Toggle aria-controls="navbarScroll" className='bg-white' />
 
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="ms-auto my-2 my-lg-0" navbarScroll>
